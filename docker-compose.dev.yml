@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      dockerfile: Dockerfile.dev
+    working_dir: /usr/src/app/2/web
+    volumes:
+      - .:/usr/src/app/2/web
+      - ../hooks:/usr/src/app/2/hooks

@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2020",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "composite": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "rootDir": "..",
+    "baseUrl": "./",
+    "paths": {
+      "_views/*": ["./src/components/views/*"],
+      "_layouts/*": ["./src/components/layouts/*"],
+      "_routes/*": ["./src/components/routes/*"],
+      "_routers/*": ["./src/components/routers/*"],
+      "_services/*": ["./src/services/*"],
+      "_slices/*": ["./src/slices/*"],
+      "_types/*": ["./src/types/*"],
+      "_utils/*": ["./src/utils/*"],
+      "__mocks__": ["./__mocks__"],
+      "__test-data__/*": ["./__test-data__/*"],
+
+      "@mui/base": ["@mui/base/modern"],
+      // "@mui/lab": ["@mui/lab/modern"],
+      "@mui/material": ["@mui/material/modern"],
+      "@mui/icons-material": ["@mui/icons-material/esm"],
+      "@mui/styled-engine": ["@mui/styled-engine/modern"],
+      "@mui/system": ["@mui/system/esm"],
+
+      "hooks": ["../hooks/src/"]
+    },
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "__mocks__", "__test-data__"],
+  "references": [
+    {
+      "path": "../hooks"
+    }
+  ]
+}

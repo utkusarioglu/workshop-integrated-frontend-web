@@ -1,0 +1,12 @@
+{
+  "name": "web",
+  "dockerComposeFile": ["../docker-compose.dev.yml", "docker-compose.yml"],
+  "service": "web",
+  "workspaceFolder": "/usr/src/app/2/web",
+  "settings": {
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#669900"
+    }
+  },
+  "extensions": []
+}
