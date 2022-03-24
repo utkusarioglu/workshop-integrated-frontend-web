@@ -48,7 +48,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declarationDir": "types"
   },
   "include": ["src", "__mocks__", "__test-data__"],
   "references": [

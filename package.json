@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "yarn webpack serve --config webpack.dev.js",
     "preview": "NODE_ENV=production webpack serve --config webpack.preview.js",
-    "ci": "webpack --config webpack.ci.js",
+    "ci": "echo yes | webpack --config webpack.ci.js",
     "test": "jest"
   },
   "devDependencies": {
