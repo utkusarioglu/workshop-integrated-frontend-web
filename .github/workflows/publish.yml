@@ -1,13 +1,14 @@
-name: "publish"
+name: "publish web"
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   publish-web:
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         # platform: [macos-latest, ubuntu-latest, windows-latest]
         platform: [ubuntu-latest]
