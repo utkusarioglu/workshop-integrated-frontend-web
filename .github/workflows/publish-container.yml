@@ -29,6 +29,8 @@ jobs:
       - name: Build web
         working-directory: web
         run: |
+          apt-get update
+          apt-get install git -y
           yarn install --frozen-lockfile --production false
           yarn ci
       # - name: Cache Web build
