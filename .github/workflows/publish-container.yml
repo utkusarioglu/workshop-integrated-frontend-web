@@ -25,7 +25,7 @@ jobs:
           path: web
       - name: Install hooks dependencies
         working-directory: hooks
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --production false
       - name: Build web
         working-directory: web
         run: |
