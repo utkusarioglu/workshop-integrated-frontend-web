@@ -7,8 +7,8 @@ const AppView = () => {
   return (
     <>
       <div>{hook}</div>
-      <Button variant="contained" onClick={() => alert("This is 2002")}>
-        Hi
+      <Button variant="contained" onClick={() => alert("This is 2002!")}>
+        Hiya
       </Button>
       <ListView />
     </>
