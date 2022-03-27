@@ -2,6 +2,7 @@ const TsConfigPathsWebpackPlugin = require("tsconfig-paths-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const DotEnvWebpack = require("dotenv-webpack");
 const { ProvidePlugin } = require("webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const CompressionPlugin = require("compression-webpack-plugin");
 
@@ -27,10 +28,10 @@ const rules = [
       },
     },
   },
-  { 
-    include: "public",
-    test: /\.(png|svg|jpg|jpeg|gif)$/i,
-    type: 'asset/resource',
+  {
+    test: /\.(png|svg|jpg|jpeg|gif|png)$/i,
+    include: path.join(__dirname, "assets"),
+    type: "asset/resource",
   },
 ];
 
@@ -61,6 +62,9 @@ const plugins = [
     process: "process/browser",
     // required by walletconnect v1
     Buffer: ["buffer", "Buffer"],
+  }),
+  new CopyPlugin({
+    patterns: [{ from: path.join(__dirname, "assets") }],
   }),
 ];
 
