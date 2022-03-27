@@ -16,7 +16,6 @@ const rules = [
     test: /\.tsx?$/,
     use: "ts-loader",
     include: ["src", "../hooks/src"].map((src) => path.join(__dirname, src)),
-    // include: path.join(__dirname, "src"),
   },
   {
     test: /\.jsx?$/,
@@ -27,6 +26,11 @@ const rules = [
         presets: ["@babel/preset-env", "@babel/preset-react"],
       },
     },
+  },
+  { 
+    include: "public",
+    test: /\.(png|svg|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
   },
 ];
 
