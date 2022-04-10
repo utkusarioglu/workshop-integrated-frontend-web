@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
   workflow_call:
 
-defaults:
+jobs:
   # define job to build and publish docker image
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
@@ -40,6 +40,7 @@ defaults:
       #     password: ${{ secrets.GHCR_PAT }}
       
       - name: Build image and push to Docker Hub and GitHub Container Registry
+        id: docker_build
         uses: docker/build-push-action@v2
         with:
           # relative path to the place where source code with Dockerfile is located
